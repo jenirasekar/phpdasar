@@ -22,7 +22,7 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
 	<tr>
 		<th>No.</th>
 		<th>Aksi</th>
-		<th>Gambar </th>
+		<th>Gambar</th>
 		<th>NRP</th>
 		<th>Nama</th>
 		<th>Email</th>
@@ -33,8 +33,8 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
 	<tr>
 		<td><?= $i ?></td>
 		<td>
-			<a href="">ubah</a> | 
-			<a href="">hapus</a>
+			<a href="">Ubah</a> | 
+			<a href="">Hapus</a>
 		</td>
 		<td><img src="img/zaynn.jpg" width="50"></td>
 		<td><?= $row["nrp"] ?></td>
