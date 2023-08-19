@@ -1,15 +1,15 @@
-<?php 
+<?php
 // cek apakah tombol submit sudah tekan atau belum
 if (isset($_POST['submit'])) {
-// cek username & password
-if ( $_POST['username'] == "admin" && $_POST['password'] == "123")  {
+	// cek username & password
+	if ($_POST['username'] == "admin" && $_POST['password'] == "123") {
 
-// jika benar, redirect keh halaman admin
-header("Location: admin.php");
-exit;
-} else {
-// jika salah, tampilkan pesan kesalahan
-	$error = true;
+		// jika benar, redirect ke halaman admin
+		header("Location: admin.php");
+		exit;
+	} else {
+		// jika salah, tampilkan pesan kesalahan
+		$error = true;
 	}
 }
 ?>
@@ -17,11 +17,13 @@ exit;
 
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Login</title>
 </head>
+
 <body>
 	<h1>Login Admin</h1>
 	<?php if (isset($error)) : ?>
@@ -42,4 +44,5 @@ exit;
 		</li>
 	</ul>
 </body>
+
 </html>

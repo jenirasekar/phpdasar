@@ -6,20 +6,20 @@
 
 $mahasiswa = [
 	[
-		"nama" => "Jenira Sekar"
-		"nrp" => "123456"
-		"email" => "skar4289@gmail.com"
-		"jurusan" => "Teknik Informatika"
+		"nama" => "Jenira Sekar",
+		"nrp" => "123456",
+		"email" => "skar4289@gmail.com",
+		"jurusan" => "Teknik Informatika",
 	],
 	[
-		"nama" => "Rina Agustisya"
-		"nrp" => "123457"
-		"email" => "gakdaemail@gmail.com"
-		"jurusan" => "Teknik Informatika"
+		"nama" => "Rina Agustisya",
+		"nrp" => "123457",
+		"email" => "gakdaemail@gmail.com",
+		"jurusan" => "Teknik Informatika",
 	]
 ];
 ?>
-<!DOCTYPE html>s
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Daftar Mahasiswa</title>
@@ -31,9 +31,7 @@ $mahasiswa = [
 		<li>
 			<a href="latihan2.php?nama"><?= $mhs["nama"];  ?></a>
 		</li>
-		<?php endforach; ?>
+		<?php endforeach; ?>
 	</ul>
 </body>
 </html>
-
-?>
