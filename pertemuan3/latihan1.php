@@ -3,9 +3,9 @@
 <head>
 	<title>Latihan 1</title>
     <style>
-        .warna-baris [
-            bgcolor: silver;
-        ]
+        .warna-baris {
+            background-color: gray;
+        }
     </style>
 </head>
 <body>
@@ -18,7 +18,7 @@
         <?php endif; ?>
 		    <tr>
                 <?php for( $j = 1; $j <= 5; $j++ ) {  ?>
-                <td><?= "$i, $j"; ?></td>}
+                <td><?= "$i, $j"; ?></td>
                 <?php } ?>
             </tr>
         <?php endfor; ?>
