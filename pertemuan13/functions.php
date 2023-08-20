@@ -52,7 +52,6 @@ function tambah($data) {
 }
 
 function upload() {
-
 	$namaFile = $_FILES['gambar']['name'];
 	$ukuranFile = $_FILES['gambar']['size'];
 	$error = $_FILES['gambar']['error'];
@@ -97,7 +96,7 @@ function upload() {
 
 function hapus($id) {
 	global $conn;
-	mysqli_query($conn, "DELETE FROM mahasiswa WHERE id = $id");
+	mysqli_query($conn, "DELETE FROM mahasiswa WHERE id_mahasiswa = $id");
 	return mysqli_affected_rows($conn);
 }
 
@@ -124,7 +123,7 @@ function ubah($data) {
 				email = '$email',
 				jurusan = '$jurusan',
 				gambar = '$gambar'
-			WHERE id = $id
+			WHERE id_mahasiswa = $id
 				";
 	mysqli_query($conn, $query);
 
@@ -139,4 +138,3 @@ function cari($keyword) {
 				";
 	return query($query);
 }
-?>
