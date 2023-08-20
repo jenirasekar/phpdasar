@@ -26,9 +26,9 @@ function query($query) {
 }
 
 function tambah($data) {
-	global $conn
+	global $conn;
 	// ambil data dari tiap elemen dalam form
-	$nama = ($data["nama"]);
+	$nama = htmlspecialchars($data["nama"]);
 	$nrp = htmlspecialchars($data["nrp"]);
 	$email = htmlspecialchars($data["email"]);
 	$jurusan = htmlspecialchars($data["jurusan"]);
@@ -48,7 +48,6 @@ function tambah($data) {
 
 function hapus($id) {
 	global $conn;
-	mysqli_query($conn, "DELETE FROM mahasiswa WHERE id = $id");
+	mysqli_query($conn, "DELETE FROM mahasiswa WHERE id_mahasiswa = $id");
 	return mysqli_affected_rows($conn);
 }
-?>

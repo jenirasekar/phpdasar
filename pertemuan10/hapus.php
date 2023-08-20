@@ -1,6 +1,6 @@
-<?php  
+<?php
 require 'functions.php';
-$id = $_GET['id'];
+$id = $_GET['id_mahasiswa'];
 
 if (hapus($id) > 0) {
 	echo "
@@ -17,5 +17,3 @@ if (hapus($id) > 0) {
 			</script>
 		";
 }
-
-?>
