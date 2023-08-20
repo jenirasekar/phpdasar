@@ -57,7 +57,7 @@ if (isset($_POST['submit'])) {
 			</li>
 			<li>
 				<label for="gambar">Gambar :</label>
-				<input type="text" name="gambar" id="gambar" value="<?= $mhs["gambar"] ?>">
+				<input type="file" name="gambar" id="gambar" value="<?= $mhs["gambar"] ?>">
 			</li>
 			<li>
 				<button type="submit" name="submit">Ubah Data!</button>
