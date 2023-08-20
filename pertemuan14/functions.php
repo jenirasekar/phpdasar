@@ -97,7 +97,7 @@ function upload() {
 
 function hapus($id) {
 	global $conn;
-	mysqli_query($conn, "DELETE FROM mahasiswa WHERE id = $id");
+	mysqli_query($conn, "DELETE FROM mahasiswa WHERE id_mahasiswa = $id");
 	return mysqli_affected_rows($conn);
 }
 
@@ -124,7 +124,7 @@ function ubah($data) {
 				email = '$email',
 				jurusan = '$jurusan',
 				gambar = '$gambar'
-			WHERE id = $id
+			WHERE id_mahasiswa = $id
 				";
 	mysqli_query($conn, $query);
 
@@ -133,7 +133,7 @@ function ubah($data) {
 }
 
 function cari($keyword) {
-	$query = "SELECT FROM * mahasiswa WHERE
+	$query = "SELECT * FROM mahasiswa WHERE
 				nama LIKE '%$keyword%' OR
 				nrp LIKE '%$keyword%'
 				";
