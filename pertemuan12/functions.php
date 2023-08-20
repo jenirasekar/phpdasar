@@ -83,11 +83,11 @@ function ubah($data) {
 
 	// query insert data
 	$query = "UPDATE mahasiswa SET 
-				nama = $nama,
-				nrp = $nrp,
-				email = $email,
-				jurusan = $jurusan,
-				gambar = $gambar
+				nama = '$nama',
+				nrp = '$nrp',
+				email = '$email',
+				jurusan = '$jurusan',
+				gambar = '$gambar'
 			WHERE id_mahasiswa = $id
 				";
 	mysqli_query($conn, $query);
