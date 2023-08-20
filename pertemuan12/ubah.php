@@ -4,14 +4,12 @@ require 'functions.php';
 // ambil data di url
 $id = $_GET['id'];
 //  query data mahasiswa berdasarkan id
-$mhs = query("SELECT * FROM mahasiswa WHERE id = $id")[0];
+$mhs = query("SELECT * FROM mahasiswa WHERE id_mahasiswa = $id")[0];
 
 // cek apakah tombol submit sudah ditekan atau belum
 if (isset($_POST['submit'])) {
-	
-	
 	// cek apakah data berhasil diubah atau tidak
-	if (isset(ubah($_POST)) > 0) {
+	if (ubah($_POST) > 0) {
 		echo "
 			<script>
 				alert('data berhasil diubah!');
@@ -26,6 +24,7 @@ if (isset($_POST['submit'])) {
 			</script>
 		";
 	}
+}
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +37,7 @@ if (isset($_POST['submit'])) {
 <body>
 	<h1>Ubah Data Mahasiswa</h1>
 	<form action="" method="post">
-		<input type="hidden" name="id" value="<?= $mhs["id"]; ?>">
+		<input type="hidden" name="id" value="<?= $mhs["id_mahasiswa"]; ?>">
 		<ul>
 			<li>
 				<label for="nama">Nama :</label>
@@ -58,7 +57,7 @@ if (isset($_POST['submit'])) {
 			</li>
 			<li>
 				<label for="gambar">Gambar :</label>
-				<input type="text" name="gambar" id="gambar" required value="<?= $mhs["gambar"] ?>">
+				<input type="file" name="gambar" id="gambar" required value="<?= $mhs["gambar"] ?>">
 			</li>
 			<li>
 				<button type="submit" name="submit">Ubah Data!</button>

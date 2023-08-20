@@ -52,24 +52,23 @@ function tambah($data) {
 }
 
 function upload() {
-
 	$namaFile = $_FILES['gambar']['name'];
 	$ukuranFile = $_FILES['gambar']['size'];
 	$error = $_FILES['gambar']['error'];
 	$tmpName = $_FILES['gambar']['tmp_name'];
 
-	// cek apakah tdak ada gambar yang diupload
+	// cek apakah tidak ada gambar yang diupload
 	if ($error === 4) {
 		echo "<script>
 				alert('pilih gambar terlebih dahulu')
-				</script>"
+				</script>";
 		return false;
 	}
 }
 
 function hapus($id) {
 	global $conn;
-	mysqli_query($conn, "DELETE FROM mahasiswa WHERE id = $id");
+	mysqli_query($conn, "DELETE FROM mahasiswa WHERE id_mahasiswa = $id");
 	return mysqli_affected_rows($conn);
 }
 
@@ -84,12 +83,12 @@ function ubah($data) {
 
 	// query insert data
 	$query = "UPDATE mahasiswa SET 
-				nama = "$nama",
-				nrp = "$nrp",
-				email = "$email",
-				jurusan = "$jurusan",
-				gambar = "$gambar"
-			WHERE id = $id
+				nama = $nama,
+				nrp = $nrp,
+				email = $email,
+				jurusan = $jurusan,
+				gambar = $gambar
+			WHERE id_mahasiswa = $id
 				";
 	mysqli_query($conn, $query);
 

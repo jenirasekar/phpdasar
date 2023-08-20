@@ -21,6 +21,7 @@ if (isset($_POST['submit'])) {
 			</script>
 		";
 	}
+}
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +34,6 @@ if (isset($_POST['submit'])) {
 <body>
 	<h1>Tambah Data Mahasiswa</h1>
 	<form action="" method="post" enctype="multipart/for-data">
-		
 		<ul>
 			<li>
 				<label for="nama">Nama :</label>
