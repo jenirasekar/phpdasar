@@ -1,5 +1,5 @@
 <?php  
-require 'funcions.php';
+require 'functions.php';
 
 // cek apakah tombol submit sudah ditekan atau belum
 if (isset($_POST['submit'])) {
